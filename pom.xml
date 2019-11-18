@@ -18,6 +18,7 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
+	      
         <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
@@ -29,7 +30,8 @@
         </plugin>
 		<pluginRepositories>
     <pluginRepository>
-        <id>apache.snapshots</id>
+
+	    <id>apache.snapshots</id>
         <name>Apache Snapshots</name>
         <url>http://repository.apache.org/content/groups/snapshots-group/</url>
         <releases>
@@ -72,11 +74,13 @@
    </build>
     <distributionManagement>
         <snapshotRepository>
+		<layout>default</layout>
             <id>nexus-snapshots</id>
             <layout>default</layout>
             <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
+		<layout>default</layout>
             <id>nexus-releases</id>
             <layout>default</layout>
             <url>http://localhost:8081/repository/maven-releases/</url>
