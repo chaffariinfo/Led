@@ -76,12 +76,11 @@
         <snapshotRepository>
 		
             <id>nexus-snapshots</id>
-            <layout>default</layout>
             <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>nexus-releases</id>
-            <layout>default</layout>
+           
             <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
