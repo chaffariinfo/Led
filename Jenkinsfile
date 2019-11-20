@@ -38,7 +38,7 @@ node{
                stage('phase de deploiement d_un artefact dans le referentiel distant') 
                           { 
                           echo 'phase de déploiement d_un artefact dans le référentiel distant'
-                          nexusPublisher nexusInstanceId: 'LocalNexus', nexusRepositoryId: 'maven-snapshots', packages: [], tagName: 'projet'
+                          nexusPublisher nexusInstanceId: 'LocalNexus', nexusRepositoryId: 'maven-snapshots', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/maven-exemple-5.2-SNAPSHOT.jar']], mavenCoordinate: [artifactId: 'jenkins-war', groupId: 'exat', packaging: 'war', version: '1.0']]]
                         }
  }
       
