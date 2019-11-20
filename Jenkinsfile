@@ -38,7 +38,7 @@ node{
                stage('phase de deploiement d_un artefact dans le referentiel distant') 
                           { 
                           echo 'phase de déploiement d_un artefact dans le référentiel distant'
-                          bat 'mvn deploy'
+                          nexusPublisher nexusInstanceId: 'LocalNexus', nexusRepositoryId: 'maven-snapshots', packages: [], tagName: 'projet'
                         }
  }
       
