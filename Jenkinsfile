@@ -20,17 +20,17 @@ node{
                           echo 'phase de compilation '
                           bat 'mvn compile'
                         }
-             stage('phase de tesT') 
+             stage('phase de test') 
                           { 
                           echo 'phase de test '
                           bat 'mvn test'
                         }
-             stage('phase de packetage') 
+             stage('phase de paqueetage') 
                           { 
                           echo 'phase de packetage  '
                           bat 'mvn package'
                         }
-             stage('phase d_intallation de pachake dans votre RL') 
+             stage('phase d_intallation de package dans votre RL') 
                           { 
                           echo 'phase d_intallation de pachake dans votre RL '
                           bat 'mvn validate'
@@ -38,7 +38,7 @@ node{
                stage('phase de deploiement d_un artefact dans le referentiel distant') 
                           { 
                           echo 'phase de déploiement d_un artefact dans le référentiel distant'
-                          nexusPublisher nexusInstanceId: 'LocalNexus', nexusRepositoryId: 'maven-snapshots', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/maven-exemple-5.2-SNAPSHOT.jar']], mavenCoordinate: [artifactId: 'jenkins-war', groupId: 'exat', packaging: 'war', version: '1.0']]]
+                          bat 'mvn deploy'
                         }
  }
       
