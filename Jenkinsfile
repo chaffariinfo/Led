@@ -1,11 +1,7 @@
 node{
              
                 
-             stage('Example Build') 
-                          { 
-                          echo 'Hello, Maven'
-                          bat 'mvn --version'
-                        }
+            
              stage('phase de validation de code') 
                           { 
                           echo 'phase de validation de code '
