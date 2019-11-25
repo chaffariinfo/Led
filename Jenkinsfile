@@ -1,9 +1,5 @@
 node{
-             stage('checkout')
-                            {
-                         echo 'Hello, git'
-                         git 'https://github.com/ElferjeniDevops/maven/'
-                        }
+             
                 
              stage('Example Build') 
                           { 
